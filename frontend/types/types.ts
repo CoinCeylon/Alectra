@@ -18,3 +18,8 @@ export interface Proposal {
     abstain: number;
   };
 }
+
+export interface VoteModalData {
+  proposal: Proposal
+  voteType: "for" | "against" | "abstain"
+}

@@ -1,7 +1,7 @@
-import { Proposal } from "@/data/mock-proposals";
 import { Data, Constr } from "lucid-cardano";
 import { loadPlutusScript } from "./loadContract";
 import { getLucid } from "./lucid";
+import { Proposal } from "@/types/types";
 
 function hexToString(hex: string): string {
   return decodeURIComponent(

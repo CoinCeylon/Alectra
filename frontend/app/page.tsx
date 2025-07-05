@@ -6,8 +6,8 @@ import { ProposalCard } from "@/components/proposal-card";
 import { ProposalDialog } from "@/components/proposal-dialog";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
-import { Proposal } from "@/data/mock-proposals";
 import { fetchProposals } from "@/lib/getProposals";
+import { Proposal } from "@/types/types";
 
 export default function CardanoResearchDashboard() {
   const [isDarkMode, setIsDarkMode] = useState(false);

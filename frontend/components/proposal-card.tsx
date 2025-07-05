@@ -6,8 +6,8 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 import { ThumbsUp, ThumbsDown, Minus, Clock, Target, Calendar, Coins } from "lucide-react"
-import type { Proposal } from "@/data/mock-proposals"
 import { useWallet } from "@meshsdk/react"
+import { Proposal } from "@/types/types"
 
 interface ProposalCardProps {
   proposal: Proposal

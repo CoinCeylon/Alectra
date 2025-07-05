@@ -10,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import type { Proposal } from "@/data/mock-proposals"
+import { Proposal } from "@/types/types"
 
 interface VoteModalData {
   proposal: Proposal
