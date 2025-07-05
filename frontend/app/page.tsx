@@ -19,50 +19,6 @@ export default function CardanoResearchDashboard() {
   const [isProposalDialogOpen, setIsProposalDialogOpen] = useState(false);
   const { connected } = useWallet();
 
-  const handleSubmitProposal = (formData: {
-    title: string;
-    description: string;
-    requestedAmount: string;
-    duration: string;
-    milestones: string[];
-  }) => {
-    const newProposal: Proposal = {
-      id: (proposals.length + 1).toString(),
-      title: formData.title,
-      description: formData.description,
-      requestedAmount: Number.parseInt(formData.requestedAmount),
-      duration: Number.parseInt(formData.duration),
-      milestones: formData.milestones, // Already an array now
-      votingStart: new Date().toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
-      votingEnd: new Date(
-        Date.now() + 7 * 24 * 60 * 60 * 1000
-      ).toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
-      votes: { for: 0, against: 0, abstain: 0 },
-      totalVotes: 0,
-      quorum: 20000,
-      status: "active",
-    };
-
-    setProposals([newProposal, ...proposals]);
-    setIsProposalDialogOpen(false);
-
-    toast.success("Proposal created successfully", {
-      description: "Your proposal has been added to the active proposals list.",
-    });
-  };
-
   const handleVote = (
     proposal: Proposal,
     voteType: "for" | "against" | "abstain"
@@ -147,7 +103,6 @@ export default function CardanoResearchDashboard() {
         <ProposalDialog
           isOpen={isProposalDialogOpen}
           onClose={() => setIsProposalDialogOpen(false)}
-          onSubmit={handleSubmitProposal}
         />
 
         <VoteConfirmationModal

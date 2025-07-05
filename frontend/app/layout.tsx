@@ -5,7 +5,8 @@ import { Toaster } from "@/components/ui/sonner";
 import dynamic from "next/dynamic";
 
 // Dynamically import the WalletProvider to ensure it is client-side only
-const WalletProvider = dynamic(() => import("@/providers/wallet-provider"), {});
+const WalletProvider = dynamic(() => import("@/providers/wallet-provider"), {
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

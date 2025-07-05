@@ -1,7 +1,5 @@
 "use client";
 
-import type React from "react";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,47 +16,25 @@ import {
 import { Plus } from "lucide-react";
 import { MilestoneSelector } from "@/components/milestone-selector";
 import { useWallet } from "@meshsdk/react";
+import { submitProposal } from "@/lib/submitProposal";
+import { toast } from "sonner";
+import Link from "next/link";
 
 interface ProposalDialogProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (formData: {
-    title: string;
-    description: string;
-    requestedAmount: string;
-    duration: string;
-    milestones: string[];
-  }) => void;
 }
 
-export function ProposalDialog({
-  isOpen,
-  onClose,
-  onSubmit,
-}: ProposalDialogProps) {
+export function ProposalDialog({ isOpen, onClose }: ProposalDialogProps) {
   const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    requestedAmount: "",
-    duration: "",
+    title: "Hello World",
+    description: " This is a test proposal",
+    requestedAmount: "2",
+    duration: "1",
   });
   const [selectedMilestones, setSelectedMilestones] = useState<string[]>([]);
-  const { connected } = useWallet();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit({
-      ...formData,
-      milestones: selectedMilestones,
-    });
-    setFormData({
-      title: "",
-      description: "",
-      requestedAmount: "",
-      duration: "",
-    });
-    setSelectedMilestones([]);
-  };
+  const { connected, wallet } = useWallet();
+  const [loading, setLoading] = useState(false);
 
   const handleClose = () => {
     setFormData({
@@ -69,6 +45,51 @@ export function ProposalDialog({
     });
     setSelectedMilestones([]);
     onClose();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!connected || !wallet) {
+      toast.error("Please connect your wallet first.");
+      return;
+    }
+
+    if (selectedMilestones.length === 0) {
+      toast.warning("Please add at least one milestone.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      toast.loading("Submitting proposal...");
+
+      const txHash = await submitProposal("lace", {
+        ...formData,
+        milestones: selectedMilestones,
+      });
+
+      toast.success(`Proposal submitted successfully!`, {
+        description: (
+          <Link
+            href={`https://preview.cardanoscan.io/transaction/${txHash}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-600"
+          >
+            View on Cardanoscan ↗
+          </Link>
+        ),
+        duration: 10000,
+      });
+
+      handleClose();
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to submit proposal.");
+    } finally {
+      setLoading(false);
+      toast.dismiss();
+    }
   };
 
   return (
@@ -147,15 +168,27 @@ export function ProposalDialog({
             onMilestonesChange={setSelectedMilestones}
           />
 
+          {selectedMilestones.length > 0 && (
+            <div className="text-sm border p-2 rounded-md bg-muted">
+              <strong>Milestones Preview:</strong>
+              <ul className="list-disc list-inside mt-1">
+                {selectedMilestones.map((m, idx) => (
+                  <li key={idx}>{m}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <DialogFooter className="gap-2">
             <Button type="button" variant="outline" onClick={handleClose}>
               Cancel
             </Button>
-            <Button
-              type="submit"
-              disabled={!connected || selectedMilestones.length === 0}
-            >
-              {connected ? "Submit Proposal" : "Connect Wallet to Submit"}
+            <Button type="submit" disabled={!connected || loading}>
+              {loading
+                ? "Submitting..."
+                : connected
+                ? "Submit Proposal"
+                : "Connect Wallet to Submit"}
             </Button>
           </DialogFooter>
         </form>
