@@ -1,0 +1,448 @@
+{
+  "preamble": {
+    "title": "rayaanr/contract",
+    "description": "Aiken contracts for project 'rayaanr/contract'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.17+c3a7fba"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "governance.governance.spend",
+      "datum": {
+        "title": "datum_opt",
+        "schema": {
+          "$ref": "#/definitions/governance~1GovernanceDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/governance~1GovernanceRedeemer"
+        }
+      },
+      "compiledCode": "5909fb01010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e3300130093754007370e90024dc3a401d370e90004dc3a4011370e9006488c8cc00400400c88cc00c004c00800a60106ea80112222222232332259800980400244c8c8c8ca60026eb4c06c0066038003375c6036009375c6036007375a6036004911112cc004c08401226601c6eb0c080010896600200500d899180118120019bae30220024081164078301b001301a00130190013014375401f159800980680244c8cc8966002603600313232598009806800c56600260326ea800a00f1640691598009809000c56600260326ea800a00f1640691598009807800c56600260326ea800a00f16406916405c80b9017180b9baa001301a0018b2030375a6030002603200260286ea803e2b3001300a004899192cc004c06800a00916405c6eb4c060004c050dd5007c56600266e1d20060048991919912cc004c07000e00d1640646eb4c064004dd6980c801180c800980a1baa00f8acc004c01c012264b300130190018992cc004c028c054dd5000c4c8c8c8c8c8ca60026eb4c07c0066040003375c603e00d375a603e00b375a603e009375a603e007375a603e00491111112cc004c09c01a2660286eb0c0980188966002005013899180118150019bae30280024099164090301f001301e001301d001301c001301b00130163754003164050603000316405860286ea803e2b30013370e9005002456600260286ea803e005164055159800980300244c8c8cc896600260380070068b2032375c60320026eb4c064008c064004c050dd5007c56600260120091323259800980d00140122c80b8dd6980c000980a1baa00f8b2024404880910122024404880910120acc004c018c044dd5000c66002602a60246ea800644646600200200644b30010018a6103d87a80008992cc004cdc39bad301a3017375400200913374a90001980c800a5eb82266006006603600480a8c06400501748c058c05cc05cc05c0064602c602e003230163017301730173017301730173017301730170019180b180b980b980b980b980b980b980b980b800c88cdc79bae30173014375400400323016301730173017301730173017001912cc0040062900044cdc02400466004004603000280aa4602c602e602e602e602e0033011375401b23016301730170019b88480012222222222222980091bac300930203754604660406ea8006600a00b2232330010013758601260446ea800c896600200314a115980099b8f375c604c00200714a313300200230270014084812122259800980b0034566002602c60426ea80762646464653001375a6052003375c6052009375c6052007375a605200491112cc0056600266e24dd6980a98151baa302d302a37540300031337120026eb4c034c0a8dd5181698151baa0188a5040a115980099b89001375a601a60546ea8c054c0a8dd500c4566002b3001300c004899b89004481e229410284566002601860146eb0c0b4c0b801626644b30010018014566002606000313300b302f302c37540346eb8c0bc006004816902d0a50300b0228a5040a114a0814229410284528205018148009814000981380098111baa01d8a5040811332259800980e8044566002603a60466ea807e330013024375403f300201c8a50980280e244446644b30010038024566002605c0071332259800981018159baa0018992cc004cc030c0c0c0b4dd500d801c566002b3001300a3017302d37540031337100106eb4c058c0b4dd5000c52820568cc004c8cc004004dd618189819181918191819181918191819181918191819181918191819181918171baa0022259800800c528456600266e3cdd7181918179baa30320010058a518998010011819800a05a40c14a14a2815a294102b45282056302f302c375400314a08150dd718168019980b9bac3016302a3754602a60546ea806000a008815902b1bad302b004302b302c00445282044899912cc004c07002a264b3001301d3026375404513259800980e18139baa0018992cc004cc014004c01c0862b30013259800980f1bad3004302a375400514a115980099b89375a600a60546ea8004cdc199b82375a605a605c605c605c605c605c605c605c605c605c605c60546ea800920c801375a600860546ea800a264b3001301f0018a50899b89375a602060566ea8008cdc199b82375a600a60566ea800d20c80100140a460146eb0c044c0a8dd5000c528205040a0605860526ea805e2600c602660526ea800629410274528204e302b3028375400314a08130cc050dd6180998139baa30123027375402a6eb4c0a8c09cdd50114528204a2302a302b302b302b302b302b302b302b302b302b302b302b302b302b0018992cc004c06802e33001015811407d001456600260320171980080ac08a03e800a2b30013370e9005005c528c5660026038017159800980e18131baa0228992cc004c070c09cdd5000c4c9660026600a002600e0431300630133029375400314a08138c0acc0a0dd5000c528204c3301437586026604e6ea8c048c09cdd500a9bad302a3027375404514a0812a2653001375a6056003375a6056605800330090208a5048889660020050018acc004c0c000a264b30013021302c3754003132598009980b181898171baa01c375c6062009159800acc004cdd7980c18171baa0014c0103d87b80008a51899baf3018302e375400298103d87d800040b115980099b8948000016266e20014c038dd6180a98171baa0018a5040b114a08162294102c181818169baa0018a5040ac64b30013021302c375400313374a900019817981818169baa0014bd7044cc068dd6180918169baa3018302d375403600a8158cc064dd6180c18161baa3017302c375403400900140b48168604e6ea8089025204a40948128888cc89660020030028acc004c0bc00626644b300130200018992cc00400e2b30015980098081bad3013302e375400315980099b89375a6026605c6ea800520c8018acc004cdc4240c86eb4c024c0b8dd5000c4cdc49bad3009302e3754002906400c52820588a5040b114a081622b30015980098081bad3019302e37540031337106eb4c064c0b8dd50009bad3011302e375400314a0816226020601c6eb0c054c0b8dd5000c52820588a5040b114a08160c0c0c0b4dd50034566002603e003132332259800802c4cdc48011bad301330303754603660606ea802a294102e1bad3031001375c60626064002605a6ea801a2004815902b19809981718159baa005375c605c00260546ea8012004816102c0a50300a00140904466e24dd6980798131baa00200123028302930293029302930290014088464b3001301d302337540031375a604e60486ea8006290002044302630233754604c60466ea8c098c09cc09cc09cc09cc09cc09cc09cc08cdd5181318119baa001375e98103d87a80004080459010180a804980a180a80422c8038601000260066ea802229344d9590011",
+      "hash": "518c25a81f6500213270f6bc6ad775ffbce9a33ae6e6bef74c8c22ce"
+    },
+    {
+      "title": "governance.governance.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "5909fb01010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e3300130093754007370e90024dc3a401d370e90004dc3a4011370e9006488c8cc00400400c88cc00c004c00800a60106ea80112222222232332259800980400244c8c8c8ca60026eb4c06c0066038003375c6036009375c6036007375a6036004911112cc004c08401226601c6eb0c080010896600200500d899180118120019bae30220024081164078301b001301a00130190013014375401f159800980680244c8cc8966002603600313232598009806800c56600260326ea800a00f1640691598009809000c56600260326ea800a00f1640691598009807800c56600260326ea800a00f16406916405c80b9017180b9baa001301a0018b2030375a6030002603200260286ea803e2b3001300a004899192cc004c06800a00916405c6eb4c060004c050dd5007c56600266e1d20060048991919912cc004c07000e00d1640646eb4c064004dd6980c801180c800980a1baa00f8acc004c01c012264b300130190018992cc004c028c054dd5000c4c8c8c8c8c8ca60026eb4c07c0066040003375c603e00d375a603e00b375a603e009375a603e007375a603e00491111112cc004c09c01a2660286eb0c0980188966002005013899180118150019bae30280024099164090301f001301e001301d001301c001301b00130163754003164050603000316405860286ea803e2b30013370e9005002456600260286ea803e005164055159800980300244c8c8cc896600260380070068b2032375c60320026eb4c064008c064004c050dd5007c56600260120091323259800980d00140122c80b8dd6980c000980a1baa00f8b2024404880910122024404880910120acc004c018c044dd5000c66002602a60246ea800644646600200200644b30010018a6103d87a80008992cc004cdc39bad301a3017375400200913374a90001980c800a5eb82266006006603600480a8c06400501748c058c05cc05cc05c0064602c602e003230163017301730173017301730173017301730170019180b180b980b980b980b980b980b980b980b800c88cdc79bae30173014375400400323016301730173017301730173017001912cc0040062900044cdc02400466004004603000280aa4602c602e602e602e602e0033011375401b23016301730170019b88480012222222222222980091bac300930203754604660406ea8006600a00b2232330010013758601260446ea800c896600200314a115980099b8f375c604c00200714a313300200230270014084812122259800980b0034566002602c60426ea80762646464653001375a6052003375c6052009375c6052007375a605200491112cc0056600266e24dd6980a98151baa302d302a37540300031337120026eb4c034c0a8dd5181698151baa0188a5040a115980099b89001375a601a60546ea8c054c0a8dd500c4566002b3001300c004899b89004481e229410284566002601860146eb0c0b4c0b801626644b30010018014566002606000313300b302f302c37540346eb8c0bc006004816902d0a50300b0228a5040a114a0814229410284528205018148009814000981380098111baa01d8a5040811332259800980e8044566002603a60466ea807e330013024375403f300201c8a50980280e244446644b30010038024566002605c0071332259800981018159baa0018992cc004cc030c0c0c0b4dd500d801c566002b3001300a3017302d37540031337100106eb4c058c0b4dd5000c52820568cc004c8cc004004dd618189819181918191819181918191819181918191819181918191819181918171baa0022259800800c528456600266e3cdd7181918179baa30320010058a518998010011819800a05a40c14a14a2815a294102b45282056302f302c375400314a08150dd718168019980b9bac3016302a3754602a60546ea806000a008815902b1bad302b004302b302c00445282044899912cc004c07002a264b3001301d3026375404513259800980e18139baa0018992cc004cc014004c01c0862b30013259800980f1bad3004302a375400514a115980099b89375a600a60546ea8004cdc199b82375a605a605c605c605c605c605c605c605c605c605c605c60546ea800920c801375a600860546ea800a264b3001301f0018a50899b89375a602060566ea8008cdc199b82375a600a60566ea800d20c80100140a460146eb0c044c0a8dd5000c528205040a0605860526ea805e2600c602660526ea800629410274528204e302b3028375400314a08130cc050dd6180998139baa30123027375402a6eb4c0a8c09cdd50114528204a2302a302b302b302b302b302b302b302b302b302b302b302b302b302b0018992cc004c06802e33001015811407d001456600260320171980080ac08a03e800a2b30013370e9005005c528c5660026038017159800980e18131baa0228992cc004c070c09cdd5000c4c9660026600a002600e0431300630133029375400314a08138c0acc0a0dd5000c528204c3301437586026604e6ea8c048c09cdd500a9bad302a3027375404514a0812a2653001375a6056003375a6056605800330090208a5048889660020050018acc004c0c000a264b30013021302c3754003132598009980b181898171baa01c375c6062009159800acc004cdd7980c18171baa0014c0103d87b80008a51899baf3018302e375400298103d87d800040b115980099b8948000016266e20014c038dd6180a98171baa0018a5040b114a08162294102c181818169baa0018a5040ac64b30013021302c375400313374a900019817981818169baa0014bd7044cc068dd6180918169baa3018302d375403600a8158cc064dd6180c18161baa3017302c375403400900140b48168604e6ea8089025204a40948128888cc89660020030028acc004c0bc00626644b300130200018992cc00400e2b30015980098081bad3013302e375400315980099b89375a6026605c6ea800520c8018acc004cdc4240c86eb4c024c0b8dd5000c4cdc49bad3009302e3754002906400c52820588a5040b114a081622b30015980098081bad3019302e37540031337106eb4c064c0b8dd50009bad3011302e375400314a0816226020601c6eb0c054c0b8dd5000c52820588a5040b114a08160c0c0c0b4dd50034566002603e003132332259800802c4cdc48011bad301330303754603660606ea802a294102e1bad3031001375c60626064002605a6ea801a2004815902b19809981718159baa005375c605c00260546ea8012004816102c0a50300a00140904466e24dd6980798131baa00200123028302930293029302930290014088464b3001301d302337540031375a604e60486ea8006290002044302630233754604c60466ea8c098c09cc09cc09cc09cc09cc09cc09cc08cdd5181318119baa001375e98103d87a80004080459010180a804980a180a80422c8038601000260066ea802229344d9590011",
+      "hash": "518c25a81f6500213270f6bc6ad775ffbce9a33ae6e6bef74c8c22ce"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "List$ByteArray": {
+      "dataType": "list",
+      "items": {
+        "$ref": "#/definitions/ByteArray"
+      }
+    },
+    "List$governance/ResearchProposal": {
+      "dataType": "list",
+      "items": {
+        "$ref": "#/definitions/governance~1ResearchProposal"
+      }
+    },
+    "List$governance/VerificationKeyHash": {
+      "dataType": "list",
+      "items": {
+        "$ref": "#/definitions/governance~1VerificationKeyHash"
+      }
+    },
+    "List$governance/VoterRecord": {
+      "dataType": "list",
+      "items": {
+        "$ref": "#/definitions/governance~1VoterRecord"
+      }
+    },
+    "governance/FundState": {
+      "title": "FundState",
+      "anyOf": [
+        {
+          "title": "FundState",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "total_funds",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "allocated_funds",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "available_funds",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "active_proposals",
+              "$ref": "#/definitions/List$governance~1ResearchProposal"
+            },
+            {
+              "title": "executed_proposals",
+              "$ref": "#/definitions/List$governance~1ResearchProposal"
+            }
+          ]
+        }
+      ]
+    },
+    "governance/GovernanceConfig": {
+      "title": "GovernanceConfig",
+      "anyOf": [
+        {
+          "title": "GovernanceConfig",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "admin",
+              "$ref": "#/definitions/governance~1VerificationKeyHash"
+            },
+            {
+              "title": "min_proposal_amount",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "max_proposal_amount",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "voting_period_days",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "quorum_percentage",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "approval_threshold",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "eligible_voters",
+              "$ref": "#/definitions/List$governance~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "governance/GovernanceDatum": {
+      "title": "GovernanceDatum",
+      "anyOf": [
+        {
+          "title": "GovernanceDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "config",
+              "$ref": "#/definitions/governance~1GovernanceConfig"
+            },
+            {
+              "title": "fund_state",
+              "$ref": "#/definitions/governance~1FundState"
+            },
+            {
+              "title": "next_proposal_id",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "governance/GovernanceRedeemer": {
+      "title": "GovernanceRedeemer",
+      "description": "Redeemer types for different contract actions\n Each action requires specific parameters and validation logic",
+      "anyOf": [
+        {
+          "title": "CreateProposal",
+          "description": "Create a new research funding proposal\n Only eligible voters can submit proposals",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "title",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "description",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "requested_amount",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "duration_months",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "milestones",
+              "$ref": "#/definitions/List$ByteArray"
+            }
+          ]
+        },
+        {
+          "title": "CastVote",
+          "description": "Cast a vote on an active proposal\n Only eligible voters can vote, and only once per proposal",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "proposal_id",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "vote",
+              "$ref": "#/definitions/governance~1Vote"
+            }
+          ]
+        },
+        {
+          "title": "ExecuteProposal",
+          "description": "Execute an approved proposal after voting period ends\n Transfers proposal to the execution phase",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": [
+            {
+              "title": "proposal_id",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "ReleaseFunds",
+          "description": "Release funds for a completed milestone\n Admin verifies milestone completion and releases corresponding funds",
+          "dataType": "constructor",
+          "index": 3,
+          "fields": [
+            {
+              "title": "proposal_id",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "milestone_index",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "UpdateConfig",
+          "description": "Update governance configuration parameters\n Admin only action",
+          "dataType": "constructor",
+          "index": 4,
+          "fields": [
+            {
+              "title": "new_config",
+              "$ref": "#/definitions/governance~1GovernanceConfig"
+            }
+          ]
+        },
+        {
+          "title": "DepositFunds",
+          "description": "Add funds to the governance treasury\n Anyone can deposit funds",
+          "dataType": "constructor",
+          "index": 5,
+          "fields": []
+        },
+        {
+          "title": "WithdrawFunds",
+          "description": "Withdraw funds from available treasury balance\n Admin only action, cannot withdraw allocated funds",
+          "dataType": "constructor",
+          "index": 6,
+          "fields": [
+            {
+              "title": "amount",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "recipient",
+              "$ref": "#/definitions/governance~1VerificationKeyHash"
+            }
+          ]
+        },
+        {
+          "title": "FinalizeVoting",
+          "description": "Finalize voting on a proposal once period ends\n Updates proposal status based on voting results",
+          "dataType": "constructor",
+          "index": 7,
+          "fields": [
+            {
+              "title": "proposal_id",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "governance/ProposalStatus": {
+      "title": "ProposalStatus",
+      "description": "Lifecycle stages of a research proposal",
+      "anyOf": [
+        {
+          "title": "Pending",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Active",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        },
+        {
+          "title": "Approved",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": []
+        },
+        {
+          "title": "Rejected",
+          "dataType": "constructor",
+          "index": 3,
+          "fields": []
+        },
+        {
+          "title": "Executed",
+          "dataType": "constructor",
+          "index": 4,
+          "fields": []
+        }
+      ]
+    },
+    "governance/ResearchProposal": {
+      "title": "ResearchProposal",
+      "anyOf": [
+        {
+          "title": "ResearchProposal",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "id",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "title",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "description",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "researcher",
+              "$ref": "#/definitions/governance~1VerificationKeyHash"
+            },
+            {
+              "title": "requested_amount",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "duration_months",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "milestones",
+              "$ref": "#/definitions/List$ByteArray"
+            },
+            {
+              "title": "created_at",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "voting_deadline",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "status",
+              "$ref": "#/definitions/governance~1ProposalStatus"
+            },
+            {
+              "title": "votes_for",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "votes_against",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "votes_abstain",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "total_voting_power",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "voters",
+              "$ref": "#/definitions/List$governance~1VoterRecord"
+            }
+          ]
+        }
+      ]
+    },
+    "governance/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "governance/Vote": {
+      "title": "Vote",
+      "anyOf": [
+        {
+          "title": "For",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Against",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        },
+        {
+          "title": "Abstain",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": []
+        }
+      ]
+    },
+    "governance/VoterRecord": {
+      "title": "VoterRecord",
+      "anyOf": [
+        {
+          "title": "VoterRecord",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "voter",
+              "$ref": "#/definitions/governance~1VerificationKeyHash"
+            },
+            {
+              "title": "vote",
+              "$ref": "#/definitions/governance~1Vote"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "alectra-governance-contract",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Alectra Governance Smart Contract and Deployment Scripts",
+  "main": "scripts/deploy.ts",
+  "scripts": {
+    "build": "aiken build",
+    "check": "aiken check",
+    "deploy": "tsx scripts/deploy.ts",
+    "deploy:real": "tsx scripts/deploy.ts --deploy",
+    "test": "aiken test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.4",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "lucid-cardano": "^0.10.7"
+  }
+}
