@@ -7,9 +7,8 @@
   "scripts": {
     "build": "aiken build",
     "check": "aiken check",
-    "deploy": "tsx scripts/deploy.ts",
-    "deploy:real": "tsx scripts/deploy.ts --deploy",
-    "test": "aiken test"
+    "deploy": "tsx script/deploy-governance.ts",
+    "test": "aiken check"
   },
   "devDependencies": {
     "@types/node": "^20.19.4",
