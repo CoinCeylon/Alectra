@@ -11,10 +11,9 @@ import { useWallet } from "@meshsdk/react"
 
 interface ProposalCardProps {
   proposal: Proposal
-  onVote: (proposal: Proposal, voteType: "for" | "against" | "abstain") => void
 }
 
-export function ProposalCard({ proposal, onVote }: ProposalCardProps) {
+export function ProposalCard({ proposal}: ProposalCardProps) {
   const { connected } = useWallet();
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -174,7 +173,7 @@ export function ProposalCard({ proposal, onVote }: ProposalCardProps) {
           {/* Voting Buttons */}
           <div className="flex gap-3 pt-2">
             <Button
-              onClick={() => onVote(proposal, "for")}
+              // onClick={() => onVote(proposal, "for")}
               variant="ghost"
               size="sm"
               className="flex-1 text-green-600 hover:bg-green-50 border border-green-200 hover:border-green-300"
@@ -185,7 +184,7 @@ export function ProposalCard({ proposal, onVote }: ProposalCardProps) {
             </Button>
 
             <Button
-              onClick={() => onVote(proposal, "against")}
+              // onClick={() => onVote(proposal, "against")}
               variant="ghost"
               size="sm"
               className="flex-1 text-red-600 hover:bg-red-50 border border-red-200 hover:border-red-300"
@@ -196,7 +195,7 @@ export function ProposalCard({ proposal, onVote }: ProposalCardProps) {
             </Button>
 
             <Button
-              onClick={() => onVote(proposal, "abstain")}
+              // onClick={() => onVote(proposal, "abstain")}
               variant="ghost"
               size="sm"
               className="flex-1 text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-gray-300"
