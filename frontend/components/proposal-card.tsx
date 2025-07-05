@@ -7,14 +7,15 @@ import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 import { ThumbsUp, ThumbsDown, Minus, Clock, Target, Calendar, Coins } from "lucide-react"
 import type { Proposal } from "@/data/mock-proposals"
+import { useWallet } from "@meshsdk/react"
 
 interface ProposalCardProps {
   proposal: Proposal
-  isWalletConnected: boolean
   onVote: (proposal: Proposal, voteType: "for" | "against" | "abstain") => void
 }
 
-export function ProposalCard({ proposal, isWalletConnected, onVote }: ProposalCardProps) {
+export function ProposalCard({ proposal, onVote }: ProposalCardProps) {
+  const { connected } = useWallet();
   const getStatusColor = (status: string) => {
     switch (status) {
       case "executed":
@@ -177,7 +178,7 @@ export function ProposalCard({ proposal, isWalletConnected, onVote }: ProposalCa
               variant="ghost"
               size="sm"
               className="flex-1 text-green-600 hover:bg-green-50 border border-green-200 hover:border-green-300"
-              disabled={!isWalletConnected}
+              disabled={!connected}
             >
               <ThumbsUp className="w-4 h-4 mr-2" />
               Vote For
@@ -188,7 +189,7 @@ export function ProposalCard({ proposal, isWalletConnected, onVote }: ProposalCa
               variant="ghost"
               size="sm"
               className="flex-1 text-red-600 hover:bg-red-50 border border-red-200 hover:border-red-300"
-              disabled={!isWalletConnected}
+              disabled={!connected}
             >
               <ThumbsDown className="w-4 h-4 mr-2" />
               Vote Against
@@ -199,7 +200,7 @@ export function ProposalCard({ proposal, isWalletConnected, onVote }: ProposalCa
               variant="ghost"
               size="sm"
               className="flex-1 text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-gray-300"
-              disabled={!isWalletConnected}
+              disabled={!connected}
             >
               <Minus className="w-4 h-4 mr-2" />
               Abstain
