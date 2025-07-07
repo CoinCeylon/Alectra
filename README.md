@@ -11,6 +11,8 @@ VoteGrants is a fast, democratic, NFT-based governance system built on Cardano, 
 - **Secure Aiken smart contracts**
 - **Modern Next.js frontend**
 
+[VoteGrants: Demo Video](https://youtu.be/w91kyTgz1BE)
+
 ## 🏗️ Project Structure
 
 ```
