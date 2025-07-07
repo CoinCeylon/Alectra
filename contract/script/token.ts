@@ -82,7 +82,7 @@ const main = async () => {
       metadata[721][policyId][`GOV_NFT_${i}`] = {
         name: `Governance NFT #${i}`,
         description:
-          "Governance voting power NFT for Alectra DAO.",
+          "Governance voting power NFT for VoteGrants DAO.",
         image:
           "ipfs://bafkreien4g4jei6lo63o53xvfvod5yw4lsfon57f2lpfdtqeczsar3at",
         mediaType: "image/png",

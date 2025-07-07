@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "alectra-governance-contract",
+      "name": "votegrants-governance-contract",
       "dependencies": {
         "dotenv": "^17.0.1",
         "lucid-cardano": "^0.10.7",

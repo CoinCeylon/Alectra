@@ -17,10 +17,10 @@ export function Navbar({ isDarkMode, setIsDarkMode }: NavbarProps) {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">A</span>
+              <span className="text-white font-bold text-sm">V</span>
             </div>
             <span className="text-xl font-semibold text-gray-900 dark:text-white">
-              Alectra
+              VoteGrants
             </span>
           </div>
 

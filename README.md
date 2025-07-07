@@ -1,9 +1,9 @@
-# Alectra: NFT-Based Governance on Cardano
+# VoteGrants: NFT-Based Governance on Cardano
 
-> **Alectra is designed for student research fund treasury management and governance.**
+> **VoteGrants is designed for student research fund treasury management and governance.**
 > It empowers student communities to propose, vote, and manage research funding in a transparent, democratic, and rapid manner using Cardano blockchain technology.
 
-Alectra is a fast, democratic, NFT-based governance system built on Cardano, featuring:
+VoteGrants is a fast, democratic, NFT-based governance system built on Cardano, featuring:
 
 - **Ultra-low quorum** (2 votes to finalize)
 - **Minute-based voting** (rapid decisions)
@@ -14,7 +14,7 @@ Alectra is a fast, democratic, NFT-based governance system built on Cardano, fea
 ## 🏗️ Project Structure
 
 ```
-Alectra/
+VoteGrants/
 ├── contract/   # Aiken smart contracts, deployment scripts, NFT logic
 └── frontend/   # Next.js web frontend for governance UI
 ```

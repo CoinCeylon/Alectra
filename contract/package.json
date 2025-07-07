@@ -1,8 +1,8 @@
 {
-  "name": "alectra-governance-contract",
+  "name": "votegrants-governance-contract",
   "type": "module",
   "version": "1.0.0",
-  "description": "Alectra Governance Smart Contract and Deployment Scripts",
+  "description": "VoteGrants Governance Smart Contract and Deployment Scripts",
   "main": "scripts/deploy.ts",
   "scripts": {
     "build": "aiken build",
