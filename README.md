@@ -114,15 +114,6 @@ npm start
 - **Majority:** 51% approval needed
 - **Fast:** Proposals finalize in minutes, not days
 
----
-
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Run tests (`npm run test` in `contract/`)
-4. Commit & push
-5. Open a Pull Request
 
 ---
 
@@ -132,4 +123,4 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ---
 
-**Built with ❤️ for the Cardano ecosystem**
+**Built with ❤️ for the CoinCeylon Hackathon**
