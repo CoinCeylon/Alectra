@@ -1,0 +1,398 @@
+{
+  "preamble": {
+    "title": "rayaanr/contract",
+    "description": "Aiken contracts for project 'rayaanr/contract'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.17+c3a7fba"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "governance_core.governance_core.spend",
+      "datum": {
+        "title": "dOpt",
+        "schema": {
+          "$ref": "#/definitions/governance_core~1GovernanceCoreDatum"
+        }
+      },
+      "redeemer": {
+        "title": "r",
+        "schema": {
+          "$ref": "#/definitions/governance_core~1GovernanceCoreRedeemer"
+        }
+      },
+      "compiledCode": "59026301010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e26466453001159800980098059baa0028cc004c03cc030dd50014dd618079808180818081808180818081808180818061baa300f300c3754009300b375400e9112cc004c010006266ebcdd38011ba7330113012300f37546024601e6ea800d2f5c11598009804000c528c4c8c96600266e24dd6980a180a98089baa30143011375400a0031325980099b89002375a600260246ea8c054c048dd5003456600266e24008dd6980098091baa006899b89337026eb4c054c05800cc966002601860246ea8006266e0cdd6980b18099baa00148302a41e290002022301530123754602a60246ea8c054c058c058c058c058c058c058c058c048dd5180a98091baa00a375a602a602c602c602c60246ea8c054c048dd5003452820208a5040404602a602c602c00314a08078dd6980980098079baa00a40348069164029300b375400f300f003488966002600800513259800980a000c4c966002600c60206ea800626464646464653001375a6034003375c603400d375a603400b375a6034009375a6034007375a60340049111112cc004c08401e023164078301a00130190013018001301700130160013011375400316403c6026003164044601e6ea802a2b300130080028acc004c03cdd5005400e2c80822b30013370e900200144c8c8cc8966002602e0070078b2028375a60280026eb4c050008c050004c03cdd500545900d201a4034300d300e001370e900018049baa0038b200e180400098019baa0088a4d13656400401",
+      "hash": "ab1390cf904818476b34a18a6013505136129bf064720232d780640f"
+    },
+    {
+      "title": "governance_core.governance_core.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59026301010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e26466453001159800980098059baa0028cc004c03cc030dd50014dd618079808180818081808180818081808180818061baa300f300c3754009300b375400e9112cc004c010006266ebcdd38011ba7330113012300f37546024601e6ea800d2f5c11598009804000c528c4c8c96600266e24dd6980a180a98089baa30143011375400a0031325980099b89002375a600260246ea8c054c048dd5003456600266e24008dd6980098091baa006899b89337026eb4c054c05800cc966002601860246ea8006266e0cdd6980b18099baa00148302a41e290002022301530123754602a60246ea8c054c058c058c058c058c058c058c058c048dd5180a98091baa00a375a602a602c602c602c60246ea8c054c048dd5003452820208a5040404602a602c602c00314a08078dd6980980098079baa00a40348069164029300b375400f300f003488966002600800513259800980a000c4c966002600c60206ea800626464646464653001375a6034003375c603400d375a603400b375a6034009375a6034007375a60340049111112cc004c08401e023164078301a00130190013018001301700130160013011375400316403c6026003164044601e6ea802a2b300130080028acc004c03cdd5005400e2c80822b30013370e900200144c8c8cc8966002602e0070078b2028375a60280026eb4c050008c050004c03cdd500545900d201a4034300d300e001370e900018049baa0038b200e180400098019baa0088a4d13656400401",
+      "hash": "ab1390cf904818476b34a18a6013505136129bf064720232d780640f"
+    },
+    {
+      "title": "proposal_validator.proposal_validator.spend",
+      "datum": {
+        "title": "dOpt",
+        "schema": {
+          "$ref": "#/definitions/proposal_validator~1ProposalDatum"
+        }
+      },
+      "redeemer": {
+        "title": "r",
+        "schema": {
+          "$ref": "#/definitions/proposal_validator~1ProposalRedeemer"
+        }
+      },
+      "compiledCode": "5905b001010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e26466453001159800980098059baa0028cc004c03cc030dd500148c040c044c044c044c044c044c044c044c04400664b30013006300c37540031337066eb4c040c034dd5000a4181520f14800100b180798061baa300f300c3754601e602060206020602060206020602060186ea8c03cc030dd50024c02cdd5003c8c040c044c044c044c0440052222232598009803801c4c9660020050018acc004c05c00a264b30015980099baf300730143754010980103d8798000899b89006375a600860286ea8022294101245660033001323300100137586030603260326032603260326032603260326032602a6ea8024896600200314a115980099b8f375c6032602c6ea8c06400400e2946266004004603400280a1017528528a0248991800991991194c00400664660020026eb0c074c068dd5180e980d1baa0122259800800c52f5c1133225980099baf3020301d37546040603a6ea8c018c074dd500118041980f9ba900a4bd7044cc07c008cc01001000626600800800280d8c078004c07c00501c520004004444b30010028800c66002007301f00299b80001323370066e00cdc019b805980098044c0040069111cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3100401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3200401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3300401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3400401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3500401914800a2900020343756600860366ea8c010c06cdd5180f0012006407044464b300130133019375400314800226eb4c074c068dd5000a03032598009809980c9baa0018a60103d87a8000899198008009bab301e301b375400444b30010018a6103d87a8000899192cc004cdc8803000c56600266e3c0180062601266040603c00497ae08a60103d87a80004071133004004302200340706eb8c070004c07c00501d203032330010010042259800800c5300103d87a8000899192cc004cdc8803000c56600266e3c018006260106603e603a00497ae08a60103d87a8000406d1330040043021003406c6eb8c06c004c07800501c1180d180d8009ba548000dc42400114a0809229410121bae3016002800a028405029422b3001300b003899192cc0056600266e20dd69802180a1baa008006899baf30073014375401098103d87980008a50404915980099b8948010006266e24dd6980b980c180c180c180c180c180c180c180c180c180c180c180a1baa008598009804800c52000899b83337046eb4c008c050dd500424190020028092294101245282024337006eb4c004c04cdd50039bad30163017301730173017301730173013375400e4602c602e602e602e602e602e00313375e600a60246ea8019300103d87a800040408080dd6180218089baa3014301137540128b201498059baa0079807801a444b300130040028992cc004c05000626464b300130070018acc004c048dd5001401a2c809a2b3001300b0018acc004c048dd5001401a2c809a2c808101018081baa00130130018b2022300f375401515980098040014566002601e6ea802a00716404115980099b874801000a2b3001300f37540150038b20208b201a40348068601a601c0026e1d20003009375400716401c300800130033754011149a26cac8009",
+      "hash": "b4e316b3404310179f9f7b360e8090d3b801fa87c559027ac8680d14"
+    },
+    {
+      "title": "proposal_validator.proposal_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "5905b001010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264653001300800198041804800cdc3a400530080024888966002600460106ea800e26466453001159800980098059baa0028cc004c03cc030dd500148c040c044c044c044c044c044c044c044c04400664b30013006300c37540031337066eb4c040c034dd5000a4181520f14800100b180798061baa300f300c3754601e602060206020602060206020602060186ea8c03cc030dd50024c02cdd5003c8c040c044c044c044c0440052222232598009803801c4c9660020050018acc004c05c00a264b30015980099baf300730143754010980103d8798000899b89006375a600860286ea8022294101245660033001323300100137586030603260326032603260326032603260326032602a6ea8024896600200314a115980099b8f375c6032602c6ea8c06400400e2946266004004603400280a1017528528a0248991800991991194c00400664660020026eb0c074c068dd5180e980d1baa0122259800800c52f5c1133225980099baf3020301d37546040603a6ea8c018c074dd500118041980f9ba900a4bd7044cc07c008cc01001000626600800800280d8c078004c07c00501c520004004444b30010028800c66002007301f00299b80001323370066e00cdc019b805980098044c0040069111cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3100401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3200401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3300401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3400401914800a2900020345980098044c00400691011cda16cfb63c702345e3936dbe8e0ed508818e71f7796d80e208928afc00a44109474f565f4e46545f3500401914800a2900020343756600860366ea8c010c06cdd5180f0012006407044464b300130133019375400314800226eb4c074c068dd5000a03032598009809980c9baa0018a60103d87a8000899198008009bab301e301b375400444b30010018a6103d87a8000899192cc004cdc8803000c56600266e3c0180062601266040603c00497ae08a60103d87a80004071133004004302200340706eb8c070004c07c00501d203032330010010042259800800c5300103d87a8000899192cc004cdc8803000c56600266e3c018006260106603e603a00497ae08a60103d87a8000406d1330040043021003406c6eb8c06c004c07800501c1180d180d8009ba548000dc42400114a0809229410121bae3016002800a028405029422b3001300b003899192cc0056600266e20dd69802180a1baa008006899baf30073014375401098103d87980008a50404915980099b8948010006266e24dd6980b980c180c180c180c180c180c180c180c180c180c180c180a1baa008598009804800c52000899b83337046eb4c008c050dd500424190020028092294101245282024337006eb4c004c04cdd50039bad30163017301730173017301730173013375400e4602c602e602e602e602e602e00313375e600a60246ea8019300103d87a800040408080dd6180218089baa3014301137540128b201498059baa0079807801a444b300130040028992cc004c05000626464b300130070018acc004c048dd5001401a2c809a2b3001300b0018acc004c048dd5001401a2c809a2c808101018081baa00130130018b2022300f375401515980098040014566002601e6ea802a00716404115980099b874801000a2b3001300f37540150038b20208b201a40348068601a601c0026e1d20003009375400716401c300800130033754011149a26cac8009",
+      "hash": "b4e316b3404310179f9f7b360e8090d3b801fa87c559027ac8680d14"
+    },
+    {
+      "title": "treasury_validator.treasury_validator.spend",
+      "datum": {
+        "title": "d",
+        "schema": {
+          "$ref": "#/definitions/treasury_validator~1TreasuryDatum"
+        }
+      },
+      "redeemer": {
+        "title": "r",
+        "schema": {
+          "$ref": "#/definitions/treasury_validator~1TreasuryRedeemer"
+        }
+      },
+      "compiledCode": "58d201010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea8016264646644b300130120038acc004cdc3a4000601a6ea8016266ebcc044c048c048c048c048c048c048c048c048c038dd5180898071baa301100b374e660206022601c6ea8c044c038dd5002a5eb822c80622c8078dd718078009bad300f002300f001300a375400b164020601600260166018002600e6ea80062c8028c020004c020c024004c020004c00cdd5004452689b2b200201",
+      "hash": "862aca1ec57d604c47d1700d3d885e838e0452c8ba11c00991952d21"
+    },
+    {
+      "title": "treasury_validator.treasury_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "58d201010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea8016264646644b300130120038acc004cdc3a4000601a6ea8016266ebcc044c048c048c048c048c048c048c048c048c038dd5180898071baa301100b374e660206022601c6ea8c044c038dd5002a5eb822c80622c8078dd718078009bad300f002300f001300a375400b164020601600260166018002600e6ea80062c8028c020004c020c024004c020004c00cdd5004452689b2b200201",
+      "hash": "862aca1ec57d604c47d1700d3d885e838e0452c8ba11c00991952d21"
+    }
+  ],
+  "definitions": {
+    "Int": {
+      "dataType": "integer"
+    },
+    "List$proposal_validator/VoterRecord": {
+      "dataType": "list",
+      "items": {
+        "$ref": "#/definitions/proposal_validator~1VoterRecord"
+      }
+    },
+    "governance_core/GovernanceConfig": {
+      "title": "GovernanceConfig",
+      "anyOf": [
+        {
+          "title": "GovernanceConfig",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "admin",
+              "$ref": "#/definitions/governance_core~1VerificationKeyHash"
+            },
+            {
+              "title": "minAllocation",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "maxAllocation",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "votingPeriod",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "quorumPercent",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "approvalPercent",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "governance_core/GovernanceCoreDatum": {
+      "title": "GovernanceCoreDatum",
+      "anyOf": [
+        {
+          "title": "GovernanceCoreDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "config",
+              "$ref": "#/definitions/governance_core~1GovernanceConfig"
+            },
+            {
+              "title": "nextId",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "treasury",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "governance_core/GovernanceCoreRedeemer": {
+      "title": "GovernanceCoreRedeemer",
+      "anyOf": [
+        {
+          "title": "UpdateConfig",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/governance_core~1GovernanceConfig"
+            }
+          ]
+        },
+        {
+          "title": "Deposit",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        },
+        {
+          "title": "CreateProposal",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": [
+            {
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "governance_core/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "proposal_validator/ProposalDatum": {
+      "title": "ProposalDatum",
+      "anyOf": [
+        {
+          "title": "ProposalDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "id",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "proposer",
+              "$ref": "#/definitions/proposal_validator~1VerificationKeyHash"
+            },
+            {
+              "title": "allocation",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "created",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "deadline",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "votesFor",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "votesAgainst",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "totalWeight",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "status",
+              "$ref": "#/definitions/proposal_validator~1ProposalStatus"
+            },
+            {
+              "title": "voters",
+              "$ref": "#/definitions/List$proposal_validator~1VoterRecord"
+            },
+            {
+              "title": "quorum",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "approval",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "proposal_validator/ProposalRedeemer": {
+      "title": "ProposalRedeemer",
+      "anyOf": [
+        {
+          "title": "Cast",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/proposal_validator~1Vote"
+            }
+          ]
+        },
+        {
+          "title": "Finalise",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        },
+        {
+          "title": "Execute",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": []
+        }
+      ]
+    },
+    "proposal_validator/ProposalStatus": {
+      "title": "ProposalStatus",
+      "anyOf": [
+        {
+          "title": "Pending",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Approved",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        },
+        {
+          "title": "Rejected",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": []
+        },
+        {
+          "title": "Executed",
+          "dataType": "constructor",
+          "index": 3,
+          "fields": []
+        }
+      ]
+    },
+    "proposal_validator/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "proposal_validator/Vote": {
+      "title": "Vote",
+      "anyOf": [
+        {
+          "title": "For",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Against",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "proposal_validator/VoterRecord": {
+      "title": "VoterRecord",
+      "anyOf": [
+        {
+          "title": "VoterRecord",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "voter",
+              "$ref": "#/definitions/proposal_validator~1VerificationKeyHash"
+            },
+            {
+              "title": "weight",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "choice",
+              "$ref": "#/definitions/proposal_validator~1Vote"
+            }
+          ]
+        }
+      ]
+    },
+    "treasury_validator/TreasuryDatum": {
+      "title": "TreasuryDatum",
+      "anyOf": [
+        {
+          "title": "TreasuryDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "admin",
+              "$ref": "#/definitions/treasury_validator~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "treasury_validator/TreasuryRedeemer": {
+      "title": "TreasuryRedeemer",
+      "anyOf": [
+        {
+          "title": "Withdraw",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "$ref": "#/definitions/treasury_validator~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "treasury_validator/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    }
+  }
+}
